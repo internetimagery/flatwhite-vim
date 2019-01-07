@@ -100,6 +100,35 @@ call s:hi ("Type",         s:purple_text,      s:purple_bg,   "none")
 call s:hi ("Underlined",   "",                 "",            "underline")
 call s:hi ("Visual",       "",                 s:base5,       "none")
 
+" html
+call s:hi ("htmlTagName",          "",        s:purple_bg, "none")
+call s:hi ("htmlArg",              "s:base2", "",          "none")
+call s:hi ("htmlTitle",            "",        "",          "none")
+call s:hi ("htmlSpecialTagName",   "",        s:purple_bg, "none")
+
+" markdown
+syn match markdownBlockquoteParagraph ">.*"
+
+call s:hi ("markdownHeadingRule",         "", s:purple_bg, "none")
+call s:hi ("markdownHeadingDelimiter",    "", s:purple_bg, "none")
+call s:hi ("markdownH1",                  "", s:purple_bg, "none")
+call s:hi ("markdownH2",                  "", s:purple_bg, "none")
+call s:hi ("markdownH3",                  "", s:purple_bg, "none")
+call s:hi ("markdownH4",                  "", s:purple_bg, "none")
+call s:hi ("markdownH5",                  "", s:purple_bg, "none")
+call s:hi ("markdownH6",                  "", s:purple_bg, "none")
+call s:hi ("markdownBlockquote",          "", s:purple_bg, "none")
+call s:hi ("markdownCodeBlock",           "", s:green_bg,  "none")
+call s:hi ("markdownLink",                "", s:blue_bg,   "none")
+call s:hi ("markdownUrl",                 "", s:blue_bg,   "none")
+call s:hi ("markdownUrlTitle",            "", s:blue_bg,   "none")
+call s:hi ("markdownLinkText",            "", s:blue_bg,   "none")
+call s:hi ("markdownLinkTextDelimiter",   "", s:blue_bg,   "none")
+call s:hi ("markdownLinkDelimiter",       "", s:blue_bg,   "none")
+call s:hi ("markdownCodeDelimiter",       "", s:orange_bg, "none")
+call s:hi ("markdownCode",                "", s:orange_bg, "none")
+call s:hi ("markdownIdDeclaration",       "", s:blue_bg,   "none")
+call s:hi ("markdownBlockquoteParagraph", "", s:green_bg,  "none")
 
 hi! link Boolean        Constant
 hi! link Character      String
