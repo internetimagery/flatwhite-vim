@@ -35,6 +35,10 @@ function! s:hi(group, fg, bg, gui)
 		let l:res = l:res . " cterm=". a:gui
 	endif
 	execute l:res
+    " for example:
+    " call s:hi ("Comment",		s:base3,			s:base7,		"italic")
+    " then
+    " hi Comment guifg=s:base3 guibg=s:base7 gui=italic
 endfunction
 
 " --------------------------------------------------------------------------------------------- >>> -
@@ -147,7 +151,7 @@ hi! link SpellLocal		SpellRare
 hi! link StorageClass	Type
 hi! link Structure		Type
 hi! link TabLine		StatusLineNC
-hi! link TabLineFill	Normal
+hi! link TabLineFill	Search
 hi! link TabLineSel		StatusLine
 hi! link Tag			Special
 hi! link Title			Statement
