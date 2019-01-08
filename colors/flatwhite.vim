@@ -92,7 +92,7 @@ call s:hi ("Normal",       s:base1,            s:base7,       "none")
 call s:hi ("Search",       "",                 s:base6,       "none")
 call s:hi ("SpellBad",     s:white,            s:diff_delete, "none")
 call s:hi ("SpellRare",    s:diff_change_dark, s:diff_change, "none")
-call s:hi ("Statement",    s:orange_text,      s:orange_bg,   "none")
+call s:hi ("Statement",    s:purple_text,      s:purple_bg,   "none")
 call s:hi ("StatusLine",   s:base7,            s:base1,       "bold")
 call s:hi ("StatusLineNC", s:base1,            s:base3,       "none")
 call s:hi ("String",       s:green_text,       s:green_bg,    "none")
@@ -100,67 +100,64 @@ call s:hi ("Type",         s:purple_text,      s:purple_bg,   "none")
 call s:hi ("Underlined",   "",                 "",            "underline")
 call s:hi ("Visual",       "",                 s:base5,       "none")
 
+
 " html
-call s:hi ("htmlTagName",          "",        s:purple_bg, "none")
-call s:hi ("htmlArg",              "s:base2", "",          "none")
-call s:hi ("htmlTitle",            "",        "",          "none")
-call s:hi ("htmlSpecialTagName",   "",        s:purple_bg, "none")
+call s:hi ("htmlTagName",        s:purple_text, s:purple_bg, "none")
+call s:hi ("htmlArg",            "s:base2",     "",          "none")
+call s:hi ("htmlTitle",          "",            "",          "none")
+call s:hi ("htmlSpecialTagName", s:purple_text, s:purple_bg, "none")
+
 
 augroup FileTypeMatch
     autocmd!
     au BufNewFile,BufRead *.css syn clear cssFunction
-    au BufNewFile,BufRead *.md call s:hi ("markdownBlockquoteLine",    "", s:green_bg,  "none")
+    " au BufNewFile,BufRead *.md call s:hi ("markdownBlockquoteLine",s:green_text, s:green_bg, "none")
 augroup END
 
 " markdown
-syn match markdownBlockquoteLine ">.*"
-call s:hi ("markdownHeadingRule",       "", s:purple_bg, "none")
-call s:hi ("markdownHeadingDelimiter",  "", s:purple_bg, "none")
-call s:hi ("markdownH1",                "", s:purple_bg, "none")
-call s:hi ("markdownH2",                "", s:purple_bg, "none")
-call s:hi ("markdownH3",                "", s:purple_bg, "none")
-call s:hi ("markdownH4",                "", s:purple_bg, "none")
-call s:hi ("markdownH5",                "", s:purple_bg, "none")
-call s:hi ("markdownH6",                "", s:purple_bg, "none")
-call s:hi ("markdownBlockquote",        "", s:purple_bg, "none")
-call s:hi ("markdownCodeBlock",         "", s:green_bg,  "none")
-call s:hi ("markdownLink",              "", s:blue_bg,   "none")
-call s:hi ("markdownUrl",               "", s:blue_bg,   "none")
-call s:hi ("markdownUrlTitle",          "", s:blue_bg,   "none")
-call s:hi ("markdownLinkText",          "", s:blue_bg,   "none")
-call s:hi ("markdownLinkTextDelimiter", "", s:blue_bg,   "none")
-call s:hi ("markdownLinkDelimiter",     "", s:blue_bg,   "none")
-call s:hi ("markdownCodeDelimiter",     "", s:orange_bg, "none")
-call s:hi ("markdownCode",              "", s:orange_bg, "none")
-call s:hi ("markdownIdDeclaration",     "", s:blue_bg,   "none")
+syn match markdownBlockquoteLine "a*"
+call s:hi ("markdownBlockquoteLine", s:green_text, s:green_bg, "none")
+call s:hi ("markdownBlockquote",     s:green_text, s:green_bg, "none")
+
+call s:hi ("markdownHeadingDelimiter",  s:purple_text, s:purple_bg, "none")
+call s:hi ("markdownCodeBlock",         s:green_text,  s:green_bg,  "none")
+call s:hi ("markdownLink",              s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownUrl",               s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownUrlTitle",          s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownLinkText",          s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownLinkTextDelimiter", s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownLinkDelimiter",     s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownCodeDelimiter",     s:orange_text, s:orange_bg, "none")
+call s:hi ("markdownCode",              s:orange_text, s:orange_bg, "none")
+call s:hi ("markdownIdDeclaration",     s:blue_text,   s:blue_bg,   "none")
 
 " C
 " TODO: paint struct/enum/union name orange
-call s:hi ("cString",        "", s:green_bg,  "none")
-call s:hi ("cFormat",        "", s:green_bg,  "none")
-call s:hi ("cSpecial",       "", s:green_bg,  "none")
-call s:hi ("cNumber",        "", s:teal_bg,   "none")
-call s:hi ("cType",          "", s:orange_bg, "none")
-call s:hi ("cRepeat",        "", s:purple_bg, "none")
-call s:hi ("cStatement",     "", s:purple_bg, "none")
-call s:hi ("cStructure",     "", s:purple_bg, "none")
-call s:hi ("cStructureName", "", s:orange_bg, "none")
+call s:hi ("cString",        s:green_text,  s:green_bg,  "none")
+call s:hi ("cFormat",        s:green_text,  s:green_bg,  "none")
+call s:hi ("cSpecial",       s:green_text,  s:green_bg,  "none")
+call s:hi ("cNumber",        s:teal_text,   s:teal_bg,   "none")
+call s:hi ("cType",          s:orange_text, s:orange_bg, "none")
+call s:hi ("cRepeat",        s:purple_text, s:purple_bg, "none")
+call s:hi ("cStatement",     s:purple_text, s:purple_bg, "none")
+call s:hi ("cStructure",     s:purple_text, s:purple_bg, "none")
+call s:hi ("cStructureName", s:orange_text, s:orange_bg, "none")
 
 " Python
 syn keyword pythonPredefinedValue False None True
-call s:hi ("pythonPredefinedValue", "", s:teal_bg,   "none")
-call s:hi ("pythonStatement",       "", s:purple_bg, "none")
-call s:hi ("pythonRepeat",          "", s:purple_bg, "none")
-call s:hi ("pythonConditional",     "", s:purple_bg, "none")
-call s:hi ("pythonException",       "", s:purple_bg, "none")
+call s:hi ("pythonPredefinedValue", s:teal_text,   s:teal_bg,   "none")
+call s:hi ("pythonStatement",       s:purple_text, s:purple_bg, "none")
+call s:hi ("pythonRepeat",          s:purple_text, s:purple_bg, "none")
+call s:hi ("pythonConditional",     s:purple_text, s:purple_bg, "none")
+call s:hi ("pythonException",       s:purple_text, s:purple_bg, "none")
 
 " CSS
-call s:hi ("cssTagName",        "", s:purple_bg, "none")
-call s:hi ("cssClassName",      "", s:purple_bg, "none")
-call s:hi ("cssImportant",      "", s:orange_bg, "none")
-call s:hi ("cssAttr",           "", s:green_bg,  "none")
-call s:hi ("cssUnitDecorators", "", s:teal_bg, "none")
-call s:hi ("cssNumber",    "", s:blue_bg, "none")
+call s:hi ("cssTagName",        s:purple_text, s:purple_bg, "none")
+call s:hi ("cssClassName",      s:purple_text, s:purple_bg, "none")
+call s:hi ("cssImportant",      s:orange_text, s:orange_bg, "none")
+call s:hi ("cssAttr",           s:green_text,  s:green_bg,  "none")
+call s:hi ("cssUnitDecorators", s:teal_text,   s:teal_bg,   "none")
+call s:hi ("cssNumber",         s:blue_text,   s:blue_bg,   "none")
 hi! link cssProp Normal
 hi! link cssUnitDecorators NONE
 hi! link cssValueInteger cssNumber

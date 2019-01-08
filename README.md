@@ -1,4 +1,4 @@
-Forked from  [kamwitsta/flatwhite-vim](https://github.com/kamwitsta/flatwhite-vim)
+Forked from  [kamwitsta/flatwhite-vim](https://github.com/kamwitsta/flatwhite-vim).\
 Improvements include:
 *   tablinefill color added.
 *   Most of the colorscheme on official version is covered in C, C++, CSS, Python.
