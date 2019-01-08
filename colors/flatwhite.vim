@@ -139,6 +139,14 @@ call s:hi ("cRepeat",        "", s:purple_bg, "none")
 call s:hi ("cStatement",     "", s:purple_bg, "none")
 call s:hi ("cStructure",     "", s:purple_bg, "none")
 
+" Python
+syn keyword pythonPredefinedValue False None True
+call s:hi ("pythonPredefinedValue", "", s:teal_bg,   "none")
+call s:hi ("pythonStatement",          "", s:purple_bg, "none")
+call s:hi ("pythonRepeat",          "", s:purple_bg, "none")
+call s:hi ("pythonConditional",     "", s:purple_bg, "none")
+call s:hi ("pythonException",       "", s:purple_bg, "none")
+
 hi! link Boolean        Constant
 hi! link Character      String
 hi! link ColorColumn    Statement
