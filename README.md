@@ -1,11 +1,11 @@
-Forked from  [kamwitsta/flatwhite-vim](https://github.com/kamwitsta/flatwhite-vim).\
+Yet another better Flatwhite colorscheme.\
 Improvements include:
-*   tablinefill color added.
-*   Most of the colorscheme on official version is covered in Markdown, C, C++, HTML, CSS, Python.
+*   tablineFill color added.
+*   Most of the colorscheme of [the official version](https://github.com/biletskyy/flatwhite-syntax) is covered in Markdown, C, C++, HTML, CSS, Python.
 
 # Install
-Use the plugin manager you use.
-One of the example is [dein](https://github.com/Shougo/dein.vim)
+Use the plugin manager you use.\
+For example, if you are using [dein](httlps://github.com/Shougo/dein.vim),
 ```vim
 call dein#add('woodyZootopia/flatwhite-vim')
 ```
