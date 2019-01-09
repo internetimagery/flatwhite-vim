@@ -38,7 +38,7 @@ function! s:hi(group, fg, bg, gui)
     " for example:
     " call s:hi ("Comment",  s:base3,   s:base7,  "italic")
     " then
-    " hi Comment guifg=s:base3 guibg=s:base7 gui=italic
+    " hi Comment guifg=s:base3 guibg=s:base7 cterm=italic gui=italic
 endfunction
 
 " --------------------------------------------------------------------------------------------- >>> -
@@ -108,6 +108,9 @@ augroup FileTypeMatch
     au BufNewFile,BufRead *.css syn clear cssFunction
     au BufNewFile,BufRead *.py syn keyword pythonPredefinedValue False None True
 augroup END
+
+" LaTeX
+call s:hi ("texBeginEndName", s:blue_text, s:blue_bg, "none")
 
 " html
 call s:hi ("htmlArg",            s:base2,       "",          "italic")

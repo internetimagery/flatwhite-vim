@@ -1,4 +1,4 @@
-Yet another better Flatwhite colorscheme.\
+Yet another Flatwhite colorscheme.\
 Improvements include:
 *   tablineFill color added.
 *   Most of the colorscheme of [the official version](https://github.com/biletskyy/flatwhite-syntax) is covered in Markdown, C, C++, HTML, CSS, Python.
