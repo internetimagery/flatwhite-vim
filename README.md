@@ -11,6 +11,6 @@ call dein#add('woodyZootopia/flatwhite-vim')
 ```
 
 # Screenshots
-<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 4.jpg" alt="GitHub Markdown screenshot" width="778px" height="756px"></p>
-<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 5.jpg" alt="C screenshot" width="778px" height="756px"></p>
-<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 6.jpg" alt="Python screenshot" width="778px" height="756px"></p>
+<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 4.png" alt="GitHub Markdown screenshot" width="778px" height="756px"></p>
+<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 5.png" alt="C screenshot" width="778px" height="756px"></p>
+<p><img src="https://github.com/biletskyy/flatwhite-syntax/raw/master/assets/ScreenShot 6.png" alt="Python screenshot" width="778px" height="756px"></p>
