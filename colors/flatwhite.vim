@@ -122,11 +122,13 @@ call s:hi ("markdownUrlTitle",          s:blue_text,   s:blue_bg,   "none")
 call s:hi ("markdownLinkText",          s:blue_text,   s:blue_bg,   "none")
 call s:hi ("markdownLinkTextDelimiter", s:blue_text,   s:blue_bg,   "none")
 call s:hi ("markdownLinkDelimiter",     s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownId",                s:blue_text,   s:blue_bg,   "none")
+call s:hi ("markdownUrlTitleDelimiter", s:blue_text,   s:blue_bg,   "none")
 call s:hi ("markdownCodeDelimiter",     s:orange_text, s:orange_bg, "none")
 call s:hi ("markdownCode",              s:orange_text, s:orange_bg, "none")
 call s:hi ("markdownIdDeclaration",     s:blue_text,   s:blue_bg,   "none")
-call s:hi ("markdownBlockquoteLine", s:green_text, s:green_bg, "none")
-call s:hi ("markdownBlockquote",     s:green_text, s:green_bg, "none")
+call s:hi ("markdownBlockquoteLine",    s:green_text,  s:green_bg,  "none")
+call s:hi ("markdownBlockquote",        s:green_text,  s:green_bg,  "none")
 
 " C
 " TODO: paint struct/enum/union name orange
@@ -222,5 +224,4 @@ hi! link WildMenu       StatusLineNC
 
 
 " vim: foldmarker=<<<,>>>
-
 
