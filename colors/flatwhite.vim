@@ -161,6 +161,12 @@ hi! link cssValueAngle     cssNumber
 hi! link cssValueTime      cssNumber
 hi! link cssValueFrequency cssNumber
 
+" gitgutter
+call s:hi ("GitGutterAdd",          s:green_text,  s:green_bg,  "none")
+call s:hi ("GitGutterChange",       s:orange_text, s:orange_bg, "none")
+call s:hi ("GitGutterDelete",       s:purple_text, s:purple_bg, "none")
+call s:hi ("GitGutterChangeDelete", s:orange_text, s:orange_bg, "none")
+
 hi! link Boolean        Constant
 hi! link Character      String
 hi! link ColorColumn    Statement

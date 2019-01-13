@@ -2,6 +2,7 @@ Yet another Flatwhite colorscheme.\
 Improvements include:
 *   tablineFill color added.
 *   Most of the colorscheme of [the official version](https://github.com/biletskyy/flatwhite-syntax) is covered in Markdown, C, C++, HTML, CSS, Python.
+*   Compatible with [vim-gitgutter](https://github.com/airblade/vim-gitgutter) plugin.
 
 # Install
 Use the plugin manager you use.\
