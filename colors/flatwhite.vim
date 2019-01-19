@@ -167,6 +167,10 @@ call s:hi ("GitGutterChange",       s:orange_text, s:orange_bg, "none")
 call s:hi ("GitGutterDelete",       s:purple_text, s:purple_bg, "none")
 call s:hi ("GitGutterChangeDelete", s:orange_text, s:orange_bg, "none")
 
+" latex
+call s:hi ("texCmdArgs", s:orange_text, s:orange_bg, "none")
+call s:hi ("texBeginEndName", s:blue_text, s:blue_bg, "none")
+
 hi! link Boolean        Constant
 hi! link Character      String
 hi! link ColorColumn    Statement
