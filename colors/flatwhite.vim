@@ -45,35 +45,40 @@ endfunction
 " - palette ----------------------------------------------------------------------------------- <<< -
 
 " base color gradually becomes light as number increases.
-let s:base1            = "#605a52"
-let s:base2            = "#93836c"
-let s:base3            = "#b9a992"
-let s:base4            = "#dcd3c6"
-let s:base5            = "#e4ddd2"
-let s:base6            = "#f1ece4"
-let s:base7            = "#f7f3ee"
-let s:accent           = "#6a4cff"
-let s:orange_text      = "#5b5143"
-let s:orange_text_sec  = "#957f5f"
-let s:orange_bg        = "#f7e0c3"
-let s:green_text       = "#525643"
-let s:green_text_sec   = "#81895d"
-let s:green_bg         = "#e2e9c1"
-let s:teal_text        = "#465953"
-let s:teal_text_sec    = "#5f8c7d"
-let s:teal_bg          = "#d2ebe3"
-let s:blue_text        = "#4c5361"
-let s:blue_text_sec    = "#7382a0"
-let s:blue_bg          = "#dde4f2"
-let s:purple_text      = "#614c61"
-let s:purple_text_sec  = "#9c739c"
-let s:purple_bg        = "#f1ddf1"
-let s:diff_add         = "#2db448"
-let s:diff_change      = "#f2a60d"
-let s:diff_change_dark = "#795306"
-let s:diff_delete      = "#ff1414"
-let s:diff_renamed     = "#52aeff"
-let s:white            = "#ffffff"
+let s:base1                   = "#605a52"
+let s:base2                   = "#93836c"
+let s:base3                   = "#b9a992"
+let s:base4                   = "#dcd3c6"
+let s:base5                   = "#e4ddd2"
+let s:base6                   = "#f1ece4"
+let s:base7                   = "#f7f3ee"
+let s:accent                  = "#6a4cff"
+let s:orange_text             = "#5b5143"
+let s:orange_text_sec         = "#957f5f"
+let s:orange_bg               = "#f7e0c3"
+let s:green_text              = "#525643"
+let s:green_text_sec          = "#81895d"
+let s:green_bg                = "#e2e9c1"
+let s:teal_text               = "#465953"
+let s:teal_text_sec           = "#5f8c7d"
+let s:teal_bg                 = "#d2ebe3"
+let s:blue_text               = "#4c5361"
+let s:blue_text_sec           = "#7382a0"
+let s:blue_bg                 = "#dde4f2"
+let s:purple_text             = "#614c61"
+let s:purple_text_sec         = "#9c739c"
+let s:purple_bg               = "#f1ddf1"
+let s:diff_add                = "#2db448"
+let s:diff_change             = "#f2a60d"
+let s:diff_change_dark        = "#795306"
+let s:diff_delete             = "#ff1414"
+let s:diff_renamed            = "#52aeff"
+let s:white                   = "#ffffff"
+
+let s:gitgutter_add           = s:diff_add
+let s:gitgutter_change        = "#c75e00"
+let s:gitgutter_delete        = s:diff_delete
+let s:gitgutter_change_delete = s:gitgutter_change
 
 " --------------------------------------------------------------------------------------------- >>> -
 " - definitions ------------------------------------------------------------------------------- <<< -
@@ -100,14 +105,6 @@ call s:hi ("String",       s:green_text,       s:green_bg,    "none")
 call s:hi ("Type",         s:purple_text,      s:purple_bg,   "none")
 call s:hi ("Underlined",   "",                 "",            "underline")
 call s:hi ("Visual",       "",                 s:base5,       "none")
-
-" commands that's to be carried out just after loading file
-augroup FileTypeMatch
-    autocmd!
-    au BufNewFile,BufRead *.md  syn match markdownBlockquoteLine "^\s*>.*" contains=markdownBlockquote
-    au BufNewFile,BufRead *.css syn clear cssFunction
-    au BufNewFile,BufRead *.py syn keyword pythonPredefinedValue False None True
-augroup END
 
 " LaTeX
 call s:hi ("texBeginEndName", s:blue_text, s:blue_bg, "none")
@@ -162,10 +159,10 @@ hi! link cssValueTime      cssNumber
 hi! link cssValueFrequency cssNumber
 
 " gitgutter
-call s:hi ("GitGutterAdd",          s:green_text,  s:green_bg,  "none")
-call s:hi ("GitGutterChange",       s:orange_text, s:orange_bg, "none")
-call s:hi ("GitGutterDelete",       s:purple_text, s:purple_bg, "none")
-call s:hi ("GitGutterChangeDelete", s:orange_text, s:orange_bg, "none")
+call s:hi ("GitGutterAdd",          s:gitgutter_add,           s:base6, "none")
+call s:hi ("GitGutterChange",       s:gitgutter_change,        s:base6, "none")
+call s:hi ("GitGutterDelete",       s:gitgutter_delete,        s:base6, "none")
+call s:hi ("GitGutterChangeDelete", s:gitgutter_change_delete, s:base6, "none")
 
 " latex
 call s:hi ("texCmdArgs", s:orange_text, s:orange_bg, "none")
