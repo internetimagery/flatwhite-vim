@@ -1,6 +1,6 @@
 " ----------------------------------------------------------------- "
 " name   flatwhite           "
-" description A Vim port of          "
+" description Another Vim port of          "
 "    https://github.com/biletskyy/flatwhite-syntax  "
 " author  kamil.stachowski@gmail.com       "
 " version  0.1 (2016.11.23)         "
@@ -105,6 +105,7 @@ call s:hi ("String",       s:green_text,       s:green_bg,    "none")
 call s:hi ("Type",         s:purple_text,      s:purple_bg,   "none")
 call s:hi ("Underlined",   "",                 "",            "underline")
 call s:hi ("Visual",       "",                 s:base5,       "none")
+call s:hi ("NormalFloat",  "",                 s:white,       "none")
 
 " LaTeX
 call s:hi ("texBeginEndName", s:blue_text, s:blue_bg, "none")
