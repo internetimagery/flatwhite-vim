@@ -140,11 +140,11 @@ hi! link cStorageClass Normal
 hi! link cStructureName cType
 
 " Python
-call s:hi ("pythonFunction",        s:blue_text,   s:blue_bg, "none")
-" call s:hi ("pythonFunctionCall",        s:blue_text, s:blue_bg, "none")
-call s:hi ("pythonClass",           s:blue_text,   s:blue_bg, "none")
-call s:hi ("pythonClassVar",        s:orange_text, s:orange_bg, "none")
-call s:hi ("pythonPredefinedValue", s:teal_text,   s:teal_bg,   "none")
+call s:hi ("pythonFunction",        s:blue_text,     s:blue_bg,   "none")
+call s:hi ("pythonFunctionCall",    s:blue_text_sec, "",          "none")
+call s:hi ("pythonClass",           s:blue_text,     s:blue_bg,   "none")
+call s:hi ("pythonClassVar",        s:orange_text,   s:orange_bg, "none")
+call s:hi ("pythonPredefinedValue", s:teal_text,     s:teal_bg,   "none")
 
 " CSS
 call s:hi ("cssTagName",        s:purple_text, s:purple_bg, "none")
