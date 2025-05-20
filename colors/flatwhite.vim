@@ -68,6 +68,7 @@ let s:blue_bg                 = "#dde4f2"
 let s:purple_text             = "#614c61"
 let s:purple_text_sec         = "#9c739c"
 let s:purple_bg               = "#f1ddf1"
+let s:red_bg                  = "#f2cece"
 let s:diff_add                = "#2db448"
 let s:diff_change             = "#f2a60d"
 let s:diff_change_dark        = "#795306"
@@ -233,6 +234,9 @@ hi! link VertSplit      StatusLineNC
 hi! link VisualNOS      Visual
 hi! link WarningMsg     DiffChange
 hi! link WildMenu       StatusLineNC
+
+" Errors a less harsh red
+call s:hi ("Error", "", s.red_bg,   "none")
 
 " --------------------------------------------------------------------------------------------- >>> -
 
