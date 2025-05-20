@@ -170,6 +170,9 @@ call s:hi ("GitGutterChange",       s:gitgutter_change,        s:base6, "none")
 call s:hi ("GitGutterDelete",       s:gitgutter_delete,        s:base6, "none")
 call s:hi ("GitGutterChangeDelete", s:gitgutter_change_delete, s:base6, "none")
 
+" lsp
+call s:hi ("lspReference", "", "", "underline")
+
 " latex
 call s:hi ("texCmdArgs", s:orange_text, s:orange_bg, "none")
 call s:hi ("texBeginEndName", s:blue_text, s:blue_bg, "none")
