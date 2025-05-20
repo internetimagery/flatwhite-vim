@@ -240,8 +240,8 @@ hi! link WarningMsg     DiffChange
 hi! link WildMenu       StatusLineNC
 
 " Errors a less harsh red
-call s:hi ("Error", s:base1, s:red_bg,      "none")
-call s:hi ("Todo",  s:base1, s:yellow_bg,   "none")
+call s:hi ("Error", s:base1, s:red_bg,      "italic")
+call s:hi ("Todo",  s:base1, s:yellow_bg,   "italic")
 
 " --------------------------------------------------------------------------------------------- >>> -
 
